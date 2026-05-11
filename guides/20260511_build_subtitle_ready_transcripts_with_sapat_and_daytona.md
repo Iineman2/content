@@ -57,6 +57,32 @@ Sapat writes transcripts next to the input video by default. The folder layout a
 
 That matters when a directory contains several `.mp4` files and you want to avoid mixing raw media, generated text, reviewer changes, and publishable drafts.
 
+## How Sapat Provider Support Is Organized
+
+Sapat keeps provider integrations small and easy to inspect. The CLI entrypoint
+is `src/sapat/script.py`, and each transcription backend lives in
+`src/sapat/transcription`.
+
+At the time of writing, Sapat includes providers for OpenAI, Groq, and Azure
+OpenAI. Each provider implements the same base shape:
+
+- Read provider-specific credentials and model names from `.env`.
+- Validate or prepare the converted audio file.
+- Send the MP3 file to the provider's speech-to-text endpoint.
+- Return either JSON or text that Sapat can save as a `.txt` transcript.
+- Optionally use a chat model to run a correction pass.
+
+That structure is useful when you want to add another speech-to-text API later.
+A new provider should follow the existing `TranscriptionBase` contract, add its
+environment variables to `.env.example`, and then register a new `--api` choice
+in the CLI.
+
+For a subtitle workflow, the important provider capability to look for is not
+only transcription quality. Check whether the provider can return timestamps,
+word-level metadata, stable language controls, and a predictable response
+format. Those features decide how much manual work remains between a raw
+transcript and a timed subtitle file.
+
 ## Prerequisites
 
 Before starting, make sure you have:
@@ -87,7 +113,7 @@ Add a `.devcontainer/devcontainer.json` file so Daytona can open the same enviro
 ```json
 {
   "name": "sapat-subtitle-workflow",
-  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.11-bullseye",
   "features": {},
   "postCreateCommand": "sudo apt-get update && sudo apt-get install -y ffmpeg && python -m pip install --upgrade pip && pip install git+https://github.com/nkkko/sapat.git",
   "customizations": {
