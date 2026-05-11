@@ -1,0 +1,2 @@
+Author: Arya Singh Title: Full-Stack Developer Description: Arya is a full-stack developer who builds practical AI and automation workflows for engineering teams. He focuses on reproducible development environments, clear technical writing, and shipping useful tools from idea to working artifact.
+Author Image: [https://github.com/Iineman2.png] Author LinkedIn: Author Twitter: Company Name: Independent Company Description: Independent software development and automation work for practical engineering workflows.

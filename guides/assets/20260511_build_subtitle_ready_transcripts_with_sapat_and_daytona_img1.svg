@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Sapat subtitle workflow in Daytona</title>
+  <desc id="desc">A workflow showing video files moving through Daytona, Sapat, provider transcription, correction, subtitle review, and publishing handoff.</desc>
+  <rect width="1200" height="620" fill="#f7f8fb"/>
+  <rect x="70" y="80" width="1060" height="460" rx="24" fill="#ffffff" stroke="#d7dce6" stroke-width="3"/>
+  <text x="90" y="132" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#111827">Subtitle delivery workflow</text>
+  <text x="90" y="166" font-family="Arial, sans-serif" font-size="18" fill="#4b5563">Reproducible transcription, correction, review, and publishing handoff inside a Daytona workspace</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="100" y="235" width="150" height="120" rx="14" fill="#e8f0ff" stroke="#7895d8" stroke-width="2"/>
+    <text x="132" y="284" font-size="22" font-weight="700" fill="#193766">MP4 videos</text>
+    <text x="126" y="318" font-size="16" fill="#31527c">media/raw</text>
+    <rect x="300" y="235" width="150" height="120" rx="14" fill="#edf8f2" stroke="#74b38a" stroke-width="2"/>
+    <text x="334" y="274" font-size="22" font-weight="700" fill="#155d35">Daytona</text>
+    <text x="325" y="307" font-size="16" fill="#246044">workspace</text>
+    <text x="328" y="331" font-size="16" fill="#246044">ffmpeg + Python</text>
+    <rect x="500" y="235" width="150" height="120" rx="14" fill="#fff4e5" stroke="#d99d38" stroke-width="2"/>
+    <text x="552" y="274" font-size="22" font-weight="700" fill="#7a4b00">Sapat</text>
+    <text x="535" y="307" font-size="16" fill="#6a4d18">quality, prompt,</text>
+    <text x="542" y="331" font-size="16" fill="#6a4d18">language, API</text>
+    <rect x="700" y="235" width="150" height="120" rx="14" fill="#f3ecff" stroke="#a181d6" stroke-width="2"/>
+    <text x="728" y="274" font-size="22" font-weight="700" fill="#4b267a">Provider</text>
+    <text x="718" y="307" font-size="16" fill="#573783">OpenAI, Groq,</text>
+    <text x="732" y="331" font-size="16" fill="#573783">or Azure</text>
+    <rect x="900" y="235" width="150" height="120" rx="14" fill="#e7f8fb" stroke="#66adc1" stroke-width="2"/>
+    <text x="935" y="274" font-size="22" font-weight="700" fill="#105061">Transcript</text>
+    <text x="928" y="307" font-size="16" fill="#2b6270">corrected txt</text>
+    <text x="932" y="331" font-size="16" fill="#2b6270">plus review</text>
+    <path d="M255 295 H292" stroke="#606b80" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+    <path d="M455 295 H492" stroke="#606b80" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+    <path d="M655 295 H692" stroke="#606b80" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+    <path d="M855 295 H892" stroke="#606b80" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+    <rect x="235" y="405" width="730" height="76" rx="16" fill="#111827"/>
+    <text x="274" y="438" font-size="20" font-weight="700" fill="#ffffff">Subtitle-ready handoff</text>
+    <text x="274" y="463" font-size="16" fill="#d1d5db">caption blocks, glossary checks, translation notes, accessibility review, and publishable artifacts</text>
+  </g>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#606b80"/>
+    </marker>
+  </defs>
+</svg>
